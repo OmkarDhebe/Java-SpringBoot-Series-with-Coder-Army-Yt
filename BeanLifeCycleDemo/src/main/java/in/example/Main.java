@@ -1,17 +1,28 @@
 package in.example;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.core.annotation.Order;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+    public static void main(String[] args) {
+//        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+
+
+//        OrderService order = context.getBean(OrderService.class);
+//        order.placeOrder();
+
+//        AppConfig appConfig =context.getBean(AppConfig.class);
+//        appConfig.demo();
+
+        CartService cart = context.getBean(CartService.class);
+        System.out.println(cart.getValue(1));
+        context.close();
+
     }
 }

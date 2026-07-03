@@ -1,0 +1,19 @@
+package in.example;
+
+import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.stereotype.Component;
+
+// @Component("userBean")
+//@Component
+public class UserService implements BeanNameAware {
+
+public UserService(){
+    System.out.println("UserService Constructor called");
+}
+    @Override
+    public void setBeanName(String name){
+        System.out.println("Bean name is "+name);
+}
+
+}
+// callback methods
