@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+<!--    <bean id="orderService" class="in.example.OrderService">-->
+<!--        <constructor-arg ref="paymentService">-->
+
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+
+<!--    <bean id="orderService" class="in.example.OrderService">-->
+<!--        <property name="paymentService" ref="paymentService">           </property>-->
+<!--    </bean>-->
+
+
+<!--    <bean id="paymentService" class="in.example.payment.PaymentService" >-->
+<!--&lt;!&ndash;    <constructor-arg value="UPI" >&ndash;&gt;-->
+<!--&lt;!&ndash;    </constructor-arg>&ndash;&gt;-->
+<!--&lt;!&ndash;    <constructor-arg value="3"/>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    <constructor-arg index="0" value="UPI" >&ndash;&gt;-->
+<!--&lt;!&ndash;    </constructor-arg>&ndash;&gt;-->
+<!--&lt;!&ndash;    <constructor-arg value="15" index="1"/>&ndash;&gt;-->
+
+<!--    <constructor-arg name ="type" value="UPI" >-->
+<!--    </constructor-arg>-->
+<!--    <constructor-arg value="6" name="retryCount"/>-->
+
+<!--</bean>-->
+
+<!--    <bean id="uPIPaymentService" class="in.example.payment.UPIPaymentService">-->
+<!--    </bean>-->
+<!--    <bean id="cardPaymentService" class="in.example.payment.CardPaymentService"></bean>-->
+<!--<bean id="orderService" class="in.example.OrderService">-->
+<!--    <constructor-arg ref="cardPaymentService">-->
+<!--    </constructor-arg>   </bean>-->
+
+    <!--<bean id="userService" class="in.example.UserService" scope="prototype">-->
+<!--</bean>-->
+
+
+<!--    <bean id="userService" class="in.example.UserService" >-->
+<!--        <constructor-arg value="Rohit"></constructor-arg>-->
+<!--    </bean>-->
+
+<!--    <bean id="userService" class="in.example.UserService" >-->
+<!--        <constructor-arg name="usernames">-->
+<!--            <list>-->
+<!--                <value>Rohit</value>-->
+<!--                <value>Rahul</value>-->
+<!--            </list>-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+
+<bean id="userService" class="in.example.UserService" init-method="init" destroy-method="cleanup" > </bean>
+
+</beans>
