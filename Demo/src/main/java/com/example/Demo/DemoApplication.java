@@ -22,7 +22,7 @@ PaymentGateway paymentGateway = context.getBean(PaymentGateway.class);
 //		System.out.println(paymentGateway.getTimeout());
 
 
-		paymentGateway.print();
+//		paymentGateway.print();
 	}
 
 }
