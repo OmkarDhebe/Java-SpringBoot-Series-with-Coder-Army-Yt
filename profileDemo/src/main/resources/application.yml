@@ -1,0 +1,21 @@
+#spring.application.name=profileDemo
+#server.port = 9090
+#app.welcome.message=Hello, welcome to my application
+#app.welcome.code=200
+
+spirng:
+  application:
+    name: profileDemo
+
+
+server:
+  port: 9090
+
+app:
+  welcome:
+    message: Hello ,welcome to my application
+    code: 200
+    users: Rohit,Rahul,Virat,Sachin
+
+
+
